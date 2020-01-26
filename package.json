@@ -1,0 +1,31 @@
+{
+  "name": "bubbo2020",
+  "version": "1.0.0",
+  "description": "New 2020 Bubbowrap.com theme, built with Wordpress/Twig/ACF",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-cssnano": "^2.1.3",
+    "tar": "^4.4.8"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-useref": "^3.1.6",
+    "postcss": "^7.0.16"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bubbowrap/bubbo2020.git"
+  },
+  "author": "Jeremy Samuel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bubbowrap/bubbo2020/issues"
+  },
+  "homepage": "https://github.com/bubbowrap/bubbo2020#readme"
+}
