@@ -1,0 +1,15 @@
+h1 {
+    font-size: rem(48);
+    font-weight: $font-normal;
+    color: $color-heading;
+    line-height: $line-height-sm;
+}
+
+h2 {
+    font-size: rem(36);
+    color: $color-heading;
+}
+
+.accent {
+    color: $red;
+}

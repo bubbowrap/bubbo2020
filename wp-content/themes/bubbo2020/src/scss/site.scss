@@ -1,0 +1,9 @@
+@import "base/all";
+@import "partials/all";
+
+body {
+    background: $white;
+    color: $color-body;
+    font-family: $font-family-primary;
+    font-weight: $font-normal;
+}
