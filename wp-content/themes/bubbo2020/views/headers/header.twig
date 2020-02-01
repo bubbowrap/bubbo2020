@@ -1,6 +1,6 @@
 <header class="site-header">
-  <a href="/" class="site-header__logo"><img onerror="{{ theme.link }}/src/img/jsamuel-logo.png" src="{{ theme.link }}/src/img/jsamuel-logo.svg" alt="Jeremy Samuel - Front-end Designer" scale="0" /></a>
-  <nav class="navigation" role="navigation">
+  <a href="/" class="site-header__logo"  data-aos="fade-in"><img onerror="{{ theme.link }}/src/img/jsamuel-logo.png" src="{{ theme.link }}/src/img/jsamuel-logo.svg" alt="Jeremy Samuel - Front-end Designer" scale="0" /></a>
+  <nav class="navigation" role="navigation" data-aos="fade-in" data-aos-delay="100">
     <ul class="navigation__list">
     {% for item in menu.items %}
       <li class="navigation__list-item"><a href="{{item.link}}" class="navigation__link">{{item.title}}</a></li>

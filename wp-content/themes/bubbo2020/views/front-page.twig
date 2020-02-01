@@ -3,12 +3,12 @@
 {% set layout_class = "c-homepage" %}
 
 {% block hero %}
-<section class="homepage-hero container" data-aos="fade-up">
-    <h1 class="homepage-hero__title" data-aos="fade-up" data-aos-offset="200" data-aos-delay="2000">Hi, I’m <strong class="accent">Jeremy Samuel</strong>, and I’m a front-end designer. I design <span class="accent">+</span> animate <span class="accent">+</span> code experiences for the web and mobile devices.</h1>
-    <a href="#" class="btn btn--line">Contact Me</a>
+<section class="homepage-hero container">
+    <h1 class="homepage-hero__title" data-aos="fade-up" data-aos-offset="200" data-aos-once="true"  data-aos-delay="100">Hi, I’m <strong class="accent">Jeremy Samuel</strong>, and I’m a front-end designer. I design <span class="accent">+</span> animate <span class="accent">+</span> code experiences for the web and mobile devices.</h1>
+    <a href="#" class="btn btn--line" style="display: block;" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">Contact Me</a>
     
         <ul class="homepage-hero__social">
-                <li class="homepage-hero__social-item" data-aos="fade-up">
+                <li class="homepage-hero__social-item" data-aos="fade-up" data-aos-once="true"  data-aos-delay="300">
                   
                     <a href="https://www.codepen.io/bubbowrap" class="homepage-hero__social-link tooltip" target="_blank" rel="noopener noreferrer" aria-label="See my work on Codepen">
                       <span class="tooltiptext">My Codepen</span>
@@ -17,7 +17,7 @@
                         </svg>
                     </a>
                 </li>
-                <li class="homepage-hero__social-item">
+                <li class="homepage-hero__social-item" data-aos="fade-up" data-aos-once="true" data-aos-delay="350">
                     <a href="https://www.github.com/bubbowrap" class="homepage-hero__social-link tooltip" target="_blank" rel="noopener noreferrer" aria-label="See my work on Github">
                         <span class="tooltiptext">My Github</span>
                         <svg viewBox="0 0 24 24">
@@ -25,7 +25,7 @@
                         </svg>                    
                     </a>
                 </li>
-                <li class="homepage-hero__social-item">
+                <li class="homepage-hero__social-item" data-aos="fade-up" data-aos-once="true" data-aos-delay="400">
                     <a href="https://www.twitter.com/bubbowrap" class="homepage-hero__social-link tooltip" target="_blank" rel="noopener noreferrer" aria-label="Follow me on Twitter">
                         <span class="tooltiptext">My Twitter</span>
                         <svg viewBox="0 0 24 24">
@@ -33,7 +33,7 @@
                         </svg>                    
                     </a>
                 </li>
-                <li class="homepage-hero__social-item">
+                <li class="homepage-hero__social-item" data-aos="fade-up" data-aos-once="true" data-aos-delay="450">
                     <a href="https://www.linkedin.com/in/bubbowrap" class="homepage-hero__social-link tooltip" target="_blank" rel="noopener noreferrer" aria-label="Connect with me on LinkedIn">
                         <span class="tooltiptext">My LinkedIn</span>
                         <svg viewBox="0 0 24 24">
@@ -47,7 +47,7 @@
   {% endblock %}
 
 {% block content %}
-<section class="work container">
+<section class="work container hp-grid" data-aos="fade-up" data-aos-offset="100" data-aos-once="true" data-aos-delay="400">
    <h2>Work</h2>
    <div class="portfolio">
      <ul class="portfolio__list">
@@ -73,7 +73,7 @@
    </div>
 </section>
 
- <section class="experience container">
+ <section class="experience container hp-grid" data-aos="fade-up" data-aos-offset="100" data-aos-once="true" data-aos-delay="400">
     <h2>Experience</h2>
     <div class="experience-box">
       <div class="experience-box__header">
@@ -109,12 +109,12 @@
         <li>Designed and built new components for company websites.</li>
       </ul>
     </div>
-     <a href="#" class="btn btn--line" style="grid-column-start: 2;">View Resume</a>
+     <a href="#" class="btn btn--line experience-resume-btn">View Resume</a>
   </section>
   
   
   
-  <section class="about container">
+  <section class="about container hp-grid" data-aos="fade-up" data-aos-offset="100" data-aos-once="true" data-aos-delay="400">
     <h2>About</h2>
     <div>
       <p>Hey, I’m Jeremy! I’m a front-end developer and designer who loves building awesome things for the web, and at my core, I’m a learner. Whenever I see something cool or engaging I immediately need to know how it's done so that I can incorporate it into my own work, and that’s led to me learning a little bit about a lot of different things.</p>
@@ -150,7 +150,7 @@
   
   
   
-  <section class="contact container">
+  <section class="contact container hp-grid" data-aos="fade-up" data-aos-offset="100" data-aos-once="true" data-aos-delay="400">
     <h2>Contact</h2>
     <div>
       <p>Check out my <a href="#">Codepen</a> and <a href="#">Github</a> to see what I’m working on, or my <a href="#">Twitter</a> to see what I’m up to. I’m always down to chat about code (or heck, just life in general), so send me an email and I’ll do my very best to get back to you!</p>
