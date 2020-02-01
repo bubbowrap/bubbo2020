@@ -1,0 +1,9 @@
+<aside class="navigation-mobile {{ active }}">
+    <ul class="navigation-mobile__list">
+        {% for item in menu.items %}
+        <li class="navigation-mobile__list-item"><a href="{{ item.link }}"
+                class="navigation-mobile__link">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{{ resume_link }}" class="btn btn--resume">Resume</a>
+</aside>

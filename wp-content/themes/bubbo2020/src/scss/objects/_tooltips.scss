@@ -1,28 +1,22 @@
-/* Tooltip container */
 .tooltip {
     position: relative;
     display: inline-block;
   }
   
-  /* Tooltip text */
   .tooltip .tooltiptext {
     visibility: hidden;
-  width: rem(120);
-    top: 100%;
-    left: 50%;
-    margin-left: rem(-60);
+    width: rem(120);
+    top: 130%;
     background-color: $red;
-    color: #fff;
+    color: $white;
     text-align: center;
     padding: rem(5) 0;
     border-radius: rem(6);
-   
-    /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
+    font-weight: normal;
   }
   
-  /* Show the tooltip text when you mouse over the tooltip container */
   .tooltip:hover .tooltiptext {
     visibility: visible;
   }
@@ -30,10 +24,10 @@
   .tooltip .tooltiptext::after {
     content: " ";
     position: absolute;
-    bottom: 100%;  /* At the top of the tooltip */
-    left: 50%;
-    margin-left: rem(-5);
-    border-width: rem(-5);
+    bottom: 100%;
+    margin-left: -0.5rem;
+    border-width: 0.5rem;
     border-style: solid;
     border-color: transparent transparent $red transparent;
+    left: 1.25rem;
   }

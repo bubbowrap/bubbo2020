@@ -5,22 +5,55 @@
     position: fixed;
     width: 100%;
     top: 0;
-    padding: 0 rem(50);
+    padding: 0 1rem;
     background: $white;
-    z-index: 999;
+    height: 4rem;
+    z-index: 2;
+    transition: all .4s ease;
+    
+    @media (min-width: $screen-sm) {
+        height: rem(100);
+    }
+
+    @media (min-width: $screen-lg) {
+        padding: 0 rem(50);
+    }
+
+    &.is-hidden {
+        transform: translateY(rem(-100));
+        transition: all .4s ease;
+    }
 
     &.is-active {
-        height: rem(75);
+        height: 3rem;
+        transition: all .4s ease;
+
+        @media (min-width: $screen-sm) {
+            height: rem(75);
+        }
+    }
+
+    &.hide-bg {
+        background: none;
     }
 }
 
 .site-header__logo {
-    width: 3.75rem;
+    width: 2.75rem;
+    height: 2.75rem;
+
+    @media (min-width: $screen-sm) {
+        width: 3.75rem;
+        height: 3.75rem;
+    }
 }
 
 .navigation {
-    display: flex;
-    align-items: center;
+    display: none;
+    @media (min-width: $screen-md) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .navigation__list {

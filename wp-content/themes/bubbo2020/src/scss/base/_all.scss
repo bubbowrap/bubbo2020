@@ -11,13 +11,23 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background: $red; /* WebKit/Blink Browsers */
+    color: $white;
+  }
+
 body {
     background: $white;
     color: $color-body;
-    font-size: $font-size-base;
+    font-size: 18px;
     font-family: $font-family-primary;
     font-weight: $font-normal;
     letter-spacing: rem(0.1);
+    height: 100vh;
+    
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 img {
