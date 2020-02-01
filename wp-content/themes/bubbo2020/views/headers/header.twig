@@ -1,5 +1,6 @@
 <header class="site-header">
   <a href="/" class="site-header__logo"  data-aos="fade-in"><img onerror="{{ theme.link }}/src/img/jsamuel-logo.png" src="{{ theme.link }}/src/img/jsamuel-logo.svg" alt="Jeremy Samuel - Front-end Designer" scale="0" /></a>
+  
   <nav class="navigation" role="navigation" data-aos="fade-in" data-aos-delay="100">
     <ul class="navigation__list">
     {% for item in menu.items %}
@@ -8,4 +9,8 @@
     </ul>
     <a href="#" class="btn btn--resume">Resume</a>
   </nav>
+    {% include 'headers/mobile-menu.twig' %}
+
+  {% include 'objects/hamburger.twig' %}
 </header>
+<div class="overlay"></div>

@@ -1,0 +1,12 @@
+{% set link = tooltip.link %}
+{% set label = tooltip.label %}
+{% set copy = tooltip.copy %}
+{% set color = tooltip.color %}
+{% set svg_code = tooltip.svg_code %}
+
+<a href="{{ link }}" class="homepage-hero__social-link tooltip" target="_blank" rel="noopener noreferrer" aria-label="{{ label }}">
+<span class="tooltiptext">{{ copy }}</span>
+    <svg viewBox="0 0 24 24">
+        <path fill="{{ color }}" d="{{ svg_code }}"></path>
+    </svg>
+</a>

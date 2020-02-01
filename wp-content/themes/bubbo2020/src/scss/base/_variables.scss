@@ -25,7 +25,7 @@ $font-family-primary: 'Palanquin', Arial, sans-serif;
     @return ($px/$font-size-base) + rem;
 }
 
-$font-size-base: 18;
+$font-size-base: 16;
 $font-size-xl: ($font-size-base * 2);
 $font-size-lg: ($font-size-base * 1.25);
 $font-size-sm: ($font-size-base * .875);
@@ -48,7 +48,7 @@ $animation-ease-in: all .2s ease-in;
 $animation-in-out: all .2s ease-in-out;
 
 $screen-xs:     321px;
-$screen-sm:     35em;
-$screen-md:     40em; //640
+$screen-sm:     40em; //640
+$screen-md:     50em;  //800
 $screen-lg:   	64em; //1024
 $screen-xl:     72em;

@@ -1,0 +1,39 @@
+.hamburger {
+position: fixed;
+right: 1rem;
+z-index: 999;
+display: block;
+
+@media(min-width: $screen-md) {
+    display: none;
+}
+
+ .line{
+    width: rem(30);
+    height: rem(2);
+    background-color: $dark;
+    display: block;
+    margin: rem(8) auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  &:hover{
+    cursor: pointer;
+  }
+
+  &.is-active {
+        .line:nth-child(2){
+            opacity: 0;
+        }
+
+        .line:nth-child(1){
+            transform: translateY(rem(10)) rotate(45deg);
+        }
+
+        .line:nth-child(3){
+            transform: translateY(rem(-10)) rotate(-45deg);
+        }
+    }
+}
