@@ -1,0 +1,36 @@
+.site-footer {
+    padding: 3rem 0;
+    text-align: center;
+    border-top: thin solid rgba(0, 0, 0, .1);
+    margin-top: 5rem;
+}
+
+.site-footer__social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.site-footer__social-item {
+    padding: 0.5rem;
+}
+
+.site-footer__social-link {
+    opacity: .7;
+    transition: transform .2s ease;
+
+    &:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+        transition: transform .2s ease;
+    }
+
+    svg {
+        padding: 0.25rem;
+        border: 2px solid $gray;
+        border-radius: 100%;
+        width: 40px;
+    }
+}

@@ -1,0 +1,25 @@
+@import "normalize";
+@import "variables";
+@import "buttons";
+@import "animations";
+@import "typography";
+@import "layout";
+
+//Base styles
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    background: $white;
+    color: $color-body;
+    font-size: $font-size-base;
+    font-family: $font-family-primary;
+    font-weight: $font-normal;
+    letter-spacing: rem(0.1);
+}
+
+img {
+    max-width: 100%;
+}

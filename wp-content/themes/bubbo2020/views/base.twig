@@ -1,0 +1,38 @@
+{% include 'html-header.twig' %}
+
+{% block fonts %}
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Palanquin:300,400,700">
+{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{{theme.path}}/dist/css/site.css" type="text/css" media="screen"/>
+	  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
+
+{% endblock %}
+
+<body class="{{body_class}}">
+	{% block header %}
+		{% include 'headers/header.twig' %}
+	{% endblock %}
+		<main class="site-main {{ layout_class }}" role="main">
+
+	{% block hero %}
+	    <section class="hero">
+		</section>
+	{% endblock %}
+
+		{% block content %}
+			Sorry, no content
+		{% endblock %}
+	</main>
+
+	{% block footer %}
+		{% include 'footers/footer.twig' %}
+		{{ function('wp_footer') }}
+		{% block page_scripts %}
+			<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>-->
+			<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+			<script type="text/javascript" src="{{site.theme.path}}/dist/js/global.js"></script>
+		{% endblock %}
+	{% endblock %}
+</body></html>

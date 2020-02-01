@@ -1,0 +1,158 @@
+.c-homepage {
+
+    h2 {
+        justify-self: end;
+        align-self: start;
+        margin: 0;
+        line-height: 1;
+        color: $red;
+        font-size: 2.5rem;
+      }
+    .homepage-hero {
+        //height: 50vh;
+        padding: rem(200) 0;
+    }
+
+    .homepage-hero__title {
+        line-height: 1.25;
+        font-size: 3rem;
+        font-weight: normal;
+        color: $dark;
+    }
+
+    .homepage-hero__social {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        position: absolute;
+      }
+      .homepage-hero__social-item {
+          margin-right: 1rem;
+      }
+      
+      .homepage-hero__social-link {
+        position: relative;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        transition: transform .2s ease;
+        &:hover {
+          transform: translateY(-2px);
+          transition: transform .2s ease;
+        }
+        svg {
+          padding: 0.25rem;
+          border: 2px solid $red;
+          border-radius: 100%;
+          width: 40px;
+          color: white !important;
+        }
+      }
+
+    .work {
+        display: grid;
+        grid-column-gap: rem(60);
+        grid-template-columns: 1fr 4fr;
+    }
+
+    .portfolio__list {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .experience {
+        display: grid;
+        grid-column-gap: rem(60);
+        grid-row-gap: rem(40);
+        grid-template-columns: 1fr 4fr;
+
+        .btn--line {
+            margin-top: -2rem;
+        }
+    }
+
+    .experience-box {
+        grid-column-start: 2;
+    }
+
+    .experience-box__title {
+        margin: 0;
+        color: $red;
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .experience-box__company {
+        margin: 0;
+        color: $dark;
+        font-size: 1.25rem;
+    }
+
+    .experience-box__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .experience-box__list {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+
+            &:before {
+                content: '+';
+                color: $red;
+                position: absolute;
+                left: 0;
+                display: block;
+                font-weight: bold;
+                line-height: 1.75;
+            }
+        }
+    }
+
+    .about {
+        display: grid;
+        grid-gap: rem(50);
+        grid-column-gap: rem(60);
+        grid-template-columns: 1fr 4fr;
+    }
+
+    .skills-lists {
+        display: grid;
+        grid-template-columns: 1.5fr 3fr 0.5fr;
+    }
+
+    .skills-lists__title {
+        color: $dark;
+        text-transform: uppercase;
+    }
+
+    .skills-lists__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-flow: wrap column;
+        max-height: rem(250);
+
+        li {
+            margin-bottom: 0.3rem;
+        }
+    }
+
+    .contact {
+        display: grid;
+        grid-column-gap: rem(60);
+        grid-template-columns: 1fr 4fr;
+    }
+}
