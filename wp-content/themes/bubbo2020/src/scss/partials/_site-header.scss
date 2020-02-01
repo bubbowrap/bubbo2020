@@ -7,9 +7,13 @@
     top: 0;
     padding: 0 1rem;
     background: $white;
+    height: 4rem;
     z-index: 2;
-    height: rem(100);
     transition: all .4s ease;
+    
+    @media (min-width: $screen-sm) {
+        height: rem(100);
+    }
 
     @media (min-width: $screen-lg) {
         padding: 0 rem(50);
@@ -21,8 +25,12 @@
     }
 
     &.is-active {
-        height: rem(75);
+        height: 3rem;
         transition: all .4s ease;
+
+        @media (min-width: $screen-sm) {
+            height: rem(75);
+        }
     }
 
     &.hide-bg {
@@ -31,8 +39,13 @@
 }
 
 .site-header__logo {
-    width: 3.75rem;
-    height: 3.75rem;
+    width: 2.75rem;
+    height: 2.75rem;
+
+    @media (min-width: $screen-sm) {
+        width: 3.75rem;
+        height: 3.75rem;
+    }
 }
 
 .navigation {

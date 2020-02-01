@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -355,10 +356,8 @@ th {
   padding: 0; }
 
 .btn {
-  text-decoration: none; }
-
-.btn--line {
-  font-size: 1.5rem; }
+  text-decoration: none;
+  display: inline-block; }
 
 .btn--resume {
   color: #E6052A;
@@ -367,10 +366,37 @@ th {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.25rem;
-  margin-top: -0.25rem; }
+  margin-top: -0.25rem;
+  position: relative; }
   .btn--resume:hover {
-    background: #E6052A;
     color: #FFFFFF; }
+    .btn--resume:hover:before {
+      top: 0; }
+  .btn--resume:before {
+    content: "";
+    position: absolute;
+    background: #E6052A;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    -webkit-transition: top 0.2s ease; }
+
+.btn--line {
+  font-size: 1.25rem; }
+  @media (min-width: 50em) {
+    .btn--line {
+      font-size: 1.5rem; } }
+  .btn--line:after {
+    content: "→";
+    font-family: Arial;
+    display: inline-block;
+    margin-left: .5rem;
+    transition: all .2s ease; }
+  .btn--line:hover:after {
+    margin-left: 1rem;
+    transition: all .2s ease; }
 
 body[data-aos-easing="linear"] [data-aos], [data-aos][data-aos][data-aos-easing="linear"] {
   transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75); }
@@ -968,9 +994,12 @@ img {
   top: 0;
   padding: 0 1rem;
   background: #FFFFFF;
+  height: 4rem;
   z-index: 2;
-  height: 6.25rem;
   transition: all .4s ease; }
+  @media (min-width: 40em) {
+    .site-header {
+      height: 6.25rem; } }
   @media (min-width: 64em) {
     .site-header {
       padding: 0 3.125rem; } }
@@ -978,14 +1007,21 @@ img {
     transform: translateY(-6.25rem);
     transition: all .4s ease; }
   .site-header.is-active {
-    height: 4.6875rem;
+    height: 3rem;
     transition: all .4s ease; }
+    @media (min-width: 40em) {
+      .site-header.is-active {
+        height: 4.6875rem; } }
   .site-header.hide-bg {
     background: none; }
 
 .site-header__logo {
-  width: 3.75rem;
-  height: 3.75rem; }
+  width: 2.75rem;
+  height: 2.75rem; }
+  @media (min-width: 40em) {
+    .site-header__logo {
+      width: 3.75rem;
+      height: 3.75rem; } }
 
 .navigation {
   display: none; }
@@ -1148,16 +1184,15 @@ img {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 7.5rem;
-  top: 120%;
-  left: 50%;
-  margin-left: -3.75rem;
+  top: 130%;
   background-color: #E6052A;
   color: #FFFFFF;
   text-align: center;
   padding: 0.3125rem 0;
   border-radius: 0.375rem;
   position: absolute;
-  z-index: 1; }
+  z-index: 1;
+  font-weight: normal; }
 
 .tooltip:hover .tooltiptext {
   visibility: visible; }
@@ -1166,11 +1201,11 @@ img {
   content: " ";
   position: absolute;
   bottom: 100%;
-  left: 50%;
-  margin-left: -0.3125rem;
-  border-width: -0.3125rem;
+  margin-left: -0.5rem;
+  border-width: 0.5rem;
   border-style: solid;
-  border-color: transparent transparent #E6052A transparent; }
+  border-color: transparent transparent #E6052A transparent;
+  left: 1.25rem; }
 
 .c-homepage .container {
   max-width: 65rem;
@@ -1179,6 +1214,15 @@ img {
   @media (min-width: 900px) {
     .c-homepage .container {
       padding: 5rem 1rem; } }
+
+.c-homepage .hp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 2.5rem; }
+  @media (min-width: 900px) {
+    .c-homepage .hp-grid {
+      grid-column-gap: 3.75rem;
+      grid-template-columns: 1fr 4fr; } }
 
 .c-homepage h2 {
   margin: 0;
@@ -1193,10 +1237,7 @@ img {
       font-size: 2.5rem; } }
 
 .c-homepage .homepage-hero {
-  padding: 9.375rem 1rem 6.25rem; }
-  @media (min-width: 40em) {
-    .c-homepage .homepage-hero {
-      padding: 9.375rem 1rem; } }
+  padding: 6.25rem 1rem; }
   @media (min-width: 50em) {
     .c-homepage .homepage-hero {
       padding: 12.5rem 1rem; } }
@@ -1204,7 +1245,7 @@ img {
 .c-homepage .homepage-hero__title {
   font-weight: normal;
   color: #4A4A4A;
-  font-size: 7vw; }
+  font-size: 6vw; }
   @media (min-width: 40em) {
     .c-homepage .homepage-hero__title {
       font-size: 2.25rem; } }
@@ -1241,15 +1282,6 @@ img {
     width: 40px;
     color: white !important; }
 
-.c-homepage .hp-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 2.5rem; }
-  @media (min-width: 900px) {
-    .c-homepage .hp-grid {
-      grid-column-gap: 3.75rem;
-      grid-template-columns: 1fr 4fr; } }
-
 .c-homepage .portfolio__list {
   display: grid;
   grid-gap: 1rem;
@@ -1259,6 +1291,58 @@ img {
   @media (min-width: 40em) {
     .c-homepage .portfolio__list {
       grid-template-columns: 1fr 1fr; } }
+
+.c-homepage .portfolio-list-item {
+  justify-self: center;
+  position: relative;
+  background: #4A4A4A; }
+  @media (min-width: 50em) {
+    .c-homepage .portfolio-list-item {
+      background: rgba(0, 0, 0, 0.8); } }
+  .c-homepage .portfolio-list-item > figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    transition: all 0.2s; }
+    .c-homepage .portfolio-list-item > figure:hover .portfolio-list-item__title {
+      transition: all 0.2s; }
+      @media (min-width: 50em) {
+        .c-homepage .portfolio-list-item > figure:hover .portfolio-list-item__title {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1); } }
+    .c-homepage .portfolio-list-item > figure:hover .portfolio-list-item__img {
+      transition: all 0.2s;
+      opacity: .2;
+      transform: scale(1.05); }
+  .c-homepage .portfolio-list-item__link {
+    text-decoration: none;
+    font-weight: normal; }
+  .c-homepage .portfolio-list-item__img {
+    display: block;
+    opacity: 1;
+    transition: all 0.2s; }
+  .c-homepage .portfolio-list-item__title {
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 1rem;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+    width: 100%; }
+    @media (min-width: 50em) {
+      .c-homepage .portfolio-list-item__title {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.05); } }
+  .c-homepage .portfolio-list-item__tag {
+    font-size: 1rem;
+    display: block;
+    font-weight: 100;
+    margin-top: 0.5rem; }
 
 .c-homepage .experience .btn--line {
   margin-top: -2rem; }

@@ -1,9 +1,6 @@
 .btn {
     text-decoration: none;
-}
-
-.btn--line {
-    font-size: 1.5rem;
+    display: inline-block;
 }
 
 .btn--resume {
@@ -14,11 +11,48 @@
     font-weight: bold;
     font-size: 1.25rem;
     margin-top: -0.25rem;
+    position: relative;
 
     &:hover {
-        background: $red;
         color: $white;
+
+        &:before {
+            top: 0;
+            }
     }
 
-    &:after {}
+    &:before {
+        content: "";
+        position: absolute;
+        background: $red;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: -1;
+        -webkit-transition: top 0.2s ease;
+      }
+}
+
+.btn--line {
+    font-size: 1.25rem;
+    
+    @media(min-width: $screen-md) {
+        font-size: 1.5rem;
+    }
+
+    &:after {
+        content:"→";
+        font-family: Arial;
+        display: inline-block;
+        margin-left: .5rem;
+        transition: all .2s ease;
+    }
+
+    &:hover {
+        &:after {
+            margin-left: 1rem;
+            transition: all .2s ease;
+        }
+    }
 }

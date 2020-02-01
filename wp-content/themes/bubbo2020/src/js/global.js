@@ -33,16 +33,15 @@ $(document).ready(function() {
     }
 
      //------------------------------------------
-    // 	 Hamburger
+    // 	 Mobile Menu
     //------------------------------------------
 
-    $(".hamburger, .overlay").click(function(){
+    $(".hamburger, .overlay, .navigation-mobile__list-item").click(function(){
         $(".hamburger").toggleClass("is-active");
       $('body').toggleClass("no-scroll");
       $(".navigation-mobile").toggleClass("is-active");
       $(".overlay").toggleClass("is-active");
     });
-
 
     //------------------------------------------
     // 	 Sticky Header

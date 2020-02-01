@@ -11,25 +11,37 @@
         }
       }
 
+      .hp-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: rem(40);
+
+        @media (min-width: $grid-breakpoint) {
+        grid-column-gap: rem(60);
+        grid-template-columns: 1fr 4fr;
+        }
+      }
+
     h2 {
 
         margin: 0;
         line-height: 1;
         color: $red;
+
         @media (min-width: $grid-breakpoint) {
             justify-self: end;
         align-self: start;
         }
+
         @media (min-width: $screen-lg) {
             font-size: 2.5rem;
 
         }
       }
+
     .homepage-hero {
-        padding: rem(150) 1rem rem(100);   
-        @media (min-width: $screen-sm) {
-        padding: rem(150) 1rem;   
-        }     
+        padding: rem(100) 1rem;
+        
         @media (min-width: $screen-md) {
             padding: rem(200) 1rem;
         }
@@ -38,7 +50,7 @@
     .homepage-hero__title {
         font-weight: normal;
         color: $dark;
-        font-size: 7vw;
+        font-size: 6vw;
 
         @media (min-width: $screen-sm) {
             font-size: 2.25rem;
@@ -81,31 +93,90 @@
           color: white !important;
         }
       }
-      .hp-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: rem(40);
-
-        @media (min-width: $grid-breakpoint) {
-        grid-column-gap: rem(60);
-        grid-template-columns: 1fr 4fr;
-        }
-      }
-    .work {
-
-    }
 
     .portfolio__list {
         display: grid;
         grid-gap: 1rem;
-        
         padding: 0;
         margin: 0;
         list-style: none;
+
         @media (min-width: $screen-sm) {
             grid-template-columns: 1fr 1fr;
         }
     }
+    .portfolio-list-item {
+        justify-self: center;
+        position: relative;
+        background: $dark;
+
+        @media (min-width: $screen-md) {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        & > figure {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin: 0;           
+            transition: $animation-basic;
+
+            &:hover {
+                .portfolio-list-item__title {
+                    transition: $animation-basic;
+
+                    @media (min-width: $screen-md) {
+                    opacity: 1;
+                    transform: translate(-50%,-50%) scale(1);
+                    }
+                }
+
+                .portfolio-list-item__img {
+                    transition: $animation-basic;
+                    opacity: .2;
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        &__link {
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        &__img {		
+            display: block;
+            opacity: 1;
+            transition: $animation-basic;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+            line-height: 1;
+            padding: 1rem;
+            color: $white;
+            text-align: center;
+            transition: $animation-basic;  
+            width: 100%;
+
+            @media (min-width: $screen-md) {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                opacity: 0;
+                transform: translate(-50%,-50%) scale(1.05);
+            }
+        }
+
+        &__tag {
+            font-size: 1rem;
+            display: block;
+            font-weight: 100;
+            margin-top: 0.5rem;
+        }
+      }
+
 
     .experience {
 
@@ -115,7 +186,8 @@
     }
 
     .experience-box {
-            grid-column: 1 / span 2;
+        grid-column: 1 / span 2;
+
         @media (min-width: $grid-breakpoint) {
         grid-column-start: 2;
         }
@@ -136,6 +208,7 @@
     }
 
     .experience-box__header {
+
         @media(min-width:$screen-md) {
         display: flex;
         justify-content: space-between;
@@ -170,14 +243,9 @@
     }
 
     .experience-resume-btn {
-
         @media(min-width: $grid-breakpoint) {
             grid-column-start: 2;
         }
-    }
-    .about {
-
-
     }
 
     .skills-lists {
