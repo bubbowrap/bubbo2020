@@ -1,9 +1,11 @@
-<header>
-<nav>
-<ul>
-{% for item in menu.items %}
-<li><a href="{{item.link}}">{{item.title}}</a></li>
-{% endfor %}
-</ul>
-</nav>
+<header class="site-header">
+  <a href="/" class="site-header__logo"><img onerror="{{ theme.link }}/src/img/jsamuel-logo.png" src="{{ theme.link }}/src/img/jsamuel-logo.svg" alt="Jeremy Samuel - Front-end Designer" scale="0" /></a>
+  <nav class="navigation" role="navigation">
+    <ul class="navigation__list">
+    {% for item in menu.items %}
+      <li class="navigation__list-item"><a href="{{item.link}}" class="navigation__link">{{item.title}}</a></li>
+    {% endfor %}
+    </ul>
+    <a href="#" class="btn btn--resume">Resume</a>
+  </nav>
 </header>

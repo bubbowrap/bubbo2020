@@ -1,0 +1,24 @@
+.btn {
+    text-decoration: none;
+}
+
+.btn--line {
+    font-size: 1.5rem;
+}
+
+.btn--resume {
+    color: $red;
+    border: 0.25rem solid $red;
+    padding: 0.5rem 2.25rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: -0.25rem;
+
+    &:hover {
+        background: $red;
+        color: $white;
+    }
+
+    &:after {}
+}

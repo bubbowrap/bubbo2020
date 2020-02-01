@@ -3,16 +3,16 @@
 //Global Colors
 $white: #FFFFFF !default;
 $red: #E6052A !default;
-$gray: #808180;
-$dark: #4A4A4A;
+$gray: #808180 !default;
+$dark: #4A4A4A !default;
 
 // Semantic Variable Names
 $color-primary: $red;
 
 // Links
 $color-link: $red;
-$color-link-hover: darken($color-link, 20%);
-$color-link-active: darken($color-link, 40%);
+$color-link-hover: darken($color-link, 5%);
+$color-link-active: darken($color-link, 10%);
 
 // Body
 $color-body: $gray;

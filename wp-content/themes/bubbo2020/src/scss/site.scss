@@ -1,9 +1,8 @@
 @import "base/all";
-@import "partials/all";
 
-body {
-    background: $white;
-    color: $color-body;
-    font-family: $font-family-primary;
-    font-weight: $font-normal;
-}
+@import "partials/all";
+@import "utilities/tooltips";
+
+// Pages
+@import "templates/front-page";
+@import "templates/404";
