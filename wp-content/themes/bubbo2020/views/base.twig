@@ -1,5 +1,14 @@
 {% include 'html-header.twig' %}
 
+{% block preload %}
+	<link href="https://code.jquery.com/jquery-1.12.4.min.js" as="script">
+	<link href="https://unpkg.com/aos@2.3.0/dist/aos.js" as="script">
+	<link href="{{site.theme.path}}/dist/js/lib/jquery.scrollTo.js" as="script">
+	<link href="{{site.theme.path}}/dist/js/global.js" as="script">
+	<link href="https://fonts.googleapis.com/css?family=Palanquin:300,400,700" as="style">
+
+{% endblock %}
+
 {% block fonts %}
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Palanquin:300,400,700">
 {% endblock %}
@@ -7,23 +16,27 @@
 {% block styles %}
 	<link rel="stylesheet" href="{{theme.path}}/dist/css/site.css" type="text/css" media="screen"/>
 	  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
-
 {% endblock %}
 
 <body class="{{body_class}}">
 	{% block header %}
 		{% include 'headers/header.twig' %}
 	{% endblock %}
-		<main class="site-main {{ layout_class }}" role="main">
+	<main class="site-main {{ layout_class }}" role="main">
 
-	{% block hero %}
-	    <section class="hero">
-		</section>
-	{% endblock %}
+		{% block hero %}
+			<section class="hero">
+			</section>
+		{% endblock %}
+
+		{% block media %}{% endblock %}
 
 		{% block content %}
 			Sorry, no content
 		{% endblock %}
+
+		{% block page_navigation %}{% endblock %}
+
 	</main>
 
 	{% block footer %}

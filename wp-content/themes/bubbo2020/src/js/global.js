@@ -28,7 +28,7 @@ $(document).ready(function() {
         $('a[href^="#"]').click(function(e) {
             // Prevent the jump and the #hash from appearing on the address bar
             e.preventDefault();
-            $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true});
+            $(window).stop(true).scrollTo(this.hash - 200, {duration:1000, interrupt:true});
         });
     }
 
@@ -36,6 +36,7 @@ $(document).ready(function() {
     // 	 Mobile Menu
     //------------------------------------------
 
+    //toggles active states of overlay/hamburger menu/menu
     $(".hamburger, .overlay, .navigation-mobile__list-item").click(function(){
         $(".hamburger").toggleClass("is-active");
       $('body').toggleClass("no-scroll");
@@ -47,7 +48,7 @@ $(document).ready(function() {
     // 	 Sticky Header
     //------------------------------------------
 
-    
+    //sticky header, shows on scroll up hides on scroll down
     var c, currentScrollTop = 0,
         navbar = $('.site-header');
  
@@ -56,7 +57,7 @@ $(document).ready(function() {
        var b = navbar.height();
       
        currentScrollTop = a;
-      
+        //adjust navbar height on scroll
        if (a >= 50) {
            navbar.addClass("is-active");
        } else {

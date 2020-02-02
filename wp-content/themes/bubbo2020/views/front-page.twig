@@ -5,10 +5,10 @@
 {% block hero %}
 <section class="homepage-hero container">
     <h1 class="homepage-hero__title" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100">{{ post.intro }}</h1>
-    <a href="#" class="btn btn--line" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">Contact Me</a>
+    <a href="mailto:hello@bubbowrap.com" class="btn btn--line" data-aos="fade-up" data-aos-once="true" data-aos-delay="150">Contact Me</a>
     
-        <ul class="homepage-hero__social">
-                <li class="homepage-hero__social-item" data-aos="fade-up" data-aos-delay="300">
+        <ul class="homepage-hero__social" data-aos="fade-up" data-aos-delay="200">
+                <li class="homepage-hero__social-item">
 
                     {% include "objects/tooltip.twig" with {
                       "tooltip" : {
@@ -21,7 +21,7 @@
                     } %}
 
                 </li>
-                <li class="homepage-hero__social-item" data-aos="fade-up" data-aos-delay="350">
+                <li class="homepage-hero__social-item">
 
                     {% include "objects/tooltip.twig" with {
                       "tooltip" : {
@@ -34,7 +34,7 @@
                     } %}
                     
                 </li>
-                <li class="homepage-hero__social-item" data-aos="fade-up" data-aos-delay="400">
+                <li class="homepage-hero__social-item">
 
                     {% include "objects/tooltip.twig" with {
                       "tooltip" : {
@@ -47,7 +47,7 @@
                     } %}
 
                 </li>
-                <li class="homepage-hero__social-item" data-aos="fade-up" data-aos-delay="450">
+                <li class="homepage-hero__social-item">
 
                     {% include "objects/tooltip.twig" with {
                       "tooltip" : {
@@ -90,7 +90,7 @@
 
 {% set experience = post.get_field('experience') %}
 
- <section id="experience" class="experience container hp-grid" data-aos="fade-up" data-aos-offset="100">
+ <section id="experience" class="experience container hp-grid" data-aos="fade-up" data-aos-offset="200">
     <h2>Experience</h2>
     {% for item in experience %}
     <div class="experience-box">
@@ -118,7 +118,7 @@
   
   {% set skills_list = post.get_field('skills_list') %}
 
-  <section id="about" class="about container hp-grid" data-aos="fade-up" data-aos-offset="100">
+  <section id="about" class="about container hp-grid" data-aos="fade-up" data-aos-offset="200">
     <h2>About</h2>
     <div> {{ post.about_summary }}
       <div class="skills-lists">
@@ -138,10 +138,10 @@
   
   
   
-  <section id="contact" class="contact container hp-grid" data-aos="fade-up" data-aos-offset="100">
+  <section id="contact" class="contact container hp-grid" data-aos="fade-up" data-aos-offset="200">
     <h2>Contact</h2>
     <div> {{post.contact}}
-      <a href="#" class="btn btn--line">Message Me</a>
+      <a href="mailto:hello@bubbowrap.com" class="btn btn--line">Message Me</a>
     </div>
   </section>
 {% endblock %}

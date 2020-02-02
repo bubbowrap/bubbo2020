@@ -1,5 +1,20 @@
 {% extends "base.twig" %}
 
+{% set layout_class = "c-404" %}
+
+{% block hero %}
+    <section class="hero">
+    	<div class="container">
+				<div>
+					<h1>404</h1>
+					<h2 class="sub">Sorry! There's nothing here.</h3>
+					<p>If you were just trying to see what my 404 page looked like, well, here you go.</p>
+				</div>
+				<br />
+				<a href="/" class="btn btn--line">Back to Homepage</a>
+    	</div>
+    </section>
+{% endblock %}
+
 {% block content %}
-	Sorry, we couldn't find what you're looking for.
 {% endblock %}

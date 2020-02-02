@@ -22,11 +22,13 @@ body {
     font-size: 18px;
     font-family: $font-family-primary;
     font-weight: $font-normal;
-    letter-spacing: rem(0.1);
+    letter-spacing: .025rem;
     height: 100vh;
-    
-    &.no-scroll {
-        overflow: hidden;
+
+    @media (max-width: $screen-md) {
+        &.no-scroll {
+            overflow: hidden;
+        }
     }
 }
 

@@ -1,6 +1,7 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
+    autoprefixer = require('autoprefixer')
+    postcss = require('gulp-postcss'),
     cssnano = require('gulp-cssnano'),
     uglify = require('gulp-uglify');
     
@@ -27,16 +28,17 @@ gulp.task('minify-js', function() {
 //minifies css
 gulp.task('minify-css', function() {
     return gulp.src('wp-content/themes/bubbo2020/src/scss/**/*.scss')
-    .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
-    }))
     .pipe(sass())
+    .pipe(postcss([ autoprefixer({
+        overrideBrowserslist: ['last 2 versions'],
+        cascade: false
+    }) ]))
     .pipe(cssnano())
     .pipe(gulp.dest('wp-content/themes/bubbo2020/dist/css/'))
 });
 
 //builds everything
-gulp.task('build', gulp.series('minify-css', 'minify-js', function() {
+gulp.task('build', gulp.series('sass', 'minify-css', 'minify-js', function(done) {
     console.log('Building and...all done!');
+    done();
 }));
