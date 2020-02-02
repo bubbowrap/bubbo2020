@@ -37,7 +37,9 @@
 .btn--line {
     position: relative;
     padding-right: 2rem;
-    
+    display: inline-flex;
+    align-items: center;
+
     @media(min-width: $screen-md) {
         font-size: 1.5rem;
     }
@@ -46,14 +48,14 @@
         content:"→";
         font-family: Arial;
         position: absolute;
-        top: 25%;
+        right: 0;
         margin-left: .5rem;
         transition: all .2s ease;
     }
 
     &:hover {
         &:after {
-            margin-left: 1rem;
+            right: -0.5rem;
             transition: all .2s ease;
         }
     }

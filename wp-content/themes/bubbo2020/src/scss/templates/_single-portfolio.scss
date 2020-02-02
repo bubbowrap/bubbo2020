@@ -5,6 +5,12 @@
 .hero__block {
     text-align: center;
 
+    &.container {
+        @media(max-width: $screen-sm) {
+            padding: 1rem
+        }    
+    }
+
     @media(min-width: $screen-md) {
         text-align: left;
         display: flex;
