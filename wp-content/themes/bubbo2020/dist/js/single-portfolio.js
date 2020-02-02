@@ -1,0 +1,1 @@
+$(".main-carousel").flickity({wrapAround:!0,imagesLoaded:!0,contain:!0,accessibility:!0});

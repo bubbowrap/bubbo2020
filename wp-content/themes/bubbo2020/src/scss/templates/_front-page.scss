@@ -14,7 +14,7 @@
       .hp-grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-row-gap: rem(40);
+        grid-row-gap: 2.5rem;
 
         @media (min-width: $grid-breakpoint) {
         grid-column-gap: rem(60);
@@ -27,6 +27,7 @@
         margin: 0;
         line-height: 1;
         color: $red;
+        font-size: 2rem;
 
         @media (min-width: $grid-breakpoint) {
             justify-self: end;
@@ -51,6 +52,7 @@
         font-weight: normal;
         color: $dark;
         font-size: 6vw;
+        margin: 1rem 0;
 
         @media (min-width: $screen-sm) {
             font-size: 2.25rem;
@@ -135,7 +137,10 @@
                 .portfolio-list-item__img {
                     transition: $animation-basic;
                     opacity: .2;
-                    transform: scale(1.05);
+                    
+                    @media (min-width: $screen-md) {
+                        transform: scale(1.05);
+                    }
                 }
             }
         }
@@ -243,6 +248,8 @@
     }
 
     .experience-resume-btn {
+        margin-top: -1.5rem;
+
         @media(min-width: $grid-breakpoint) {
             grid-column-start: 2;
         }

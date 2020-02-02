@@ -1,0 +1,104 @@
+{% extends "base.twig" %}
+
+{% set layout_class = "c-single-portfolio" %}
+
+{% set slider_toggle = post.get_field('slider_toggle') %}
+{% set video_toggle = post.get_field('video_toggle') %}
+
+{% block hero %}
+    <section class="hero hero--portfolio" data-aos="fade-up" data-aos-offset="200">
+			<div class="hero__block container">
+				<div>
+					<h1 class="hero__title">{{post.title}}</h1>
+					<p class="hero__category">{{post.terms('portfolio-category') | join(', ') }}</p>
+				</div>
+				<div>
+				{% if post.site_address %}
+					<a href="{{post.site_address}}" class="btn btn--line" target="_blank" rel="noopener">
+					{% if video_toggle %}
+						Watch on Vimeo
+					{% else %}
+						Visit Site
+					{% endif %}
+					</a>
+				{% endif %}
+				</div>
+			</div>
+    	</div>
+    </section>
+{% endblock %}
+
+{% block media %}
+{% if slider_toggle %}
+{% set slider = post.get_field('slider_images') %}
+	<section class="project-shots" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100">
+		<div class="main-carousel">
+			{% for slide in slider %}
+				<div class="carousel-cell"><img src="{{slide.image.url}}" alt="{{slide.image.alt}}"></div>
+			{% endfor %}
+		</div>
+	</section>
+	{% endif %}
+
+{% if video_toggle %}
+	<section class="project-shots">
+		<div class="container">
+			<div class="project-shots__media">
+				<div class="video-wrapper">
+					{{ post.embed_code }}
+				</div>
+			</div>
+		</div>
+	</section>	
+{% endif %}
+{% endblock %}
+
+{% block content %}
+	<section class="project-info container" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100">
+			<div class="project-details">
+			{% if post.details %}
+				<h2 class="project-details__title">Project Details</h3>
+				{{post.details|wpautop }}
+			{% endif %}		
+		</div>
+		<div class="project-specs" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
+		{% if post.role %}
+			<div class="project-specs__item">
+				<h4 class="project-specs__title">Role</h4>
+				<p class="project-specs__content">{{post.role}}</p>
+			</div>
+		{% endif %}
+		{% if post.client %}
+			<div class="project-specs__item">
+				<h4 class="project-specs__title">Client</h4>
+				<p class="project-specs__content">{{post.client}}</p>
+			</div>
+		{% endif %}
+		{% if post.tools %}
+			<div class="project-specs__item">
+				<h4 class="project-specs__title">Tools</h4>
+				<p class="project-specs__content">{{post.tools}}</p>
+			</div>
+		{% endif %}
+		{% if post.development %}
+			<div class="project-specs__item">
+				<h4 class="project-specs__title">Development</h4>
+				<p class="project-specs__content">{{post.development}}</p>
+			</div>
+		{% endif %}		
+		</div>
+
+	</section>
+{% endblock %}
+
+{% block page_navigation %}
+		<section class="page-nav" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100">
+			<a href="/#work" class="btn btn--line">Back to Portfolio</a>
+		</section>
+{% endblock %}
+
+{% block page_scripts %}
+    {{ parent() }}
+	<script type="text/javascript" src="{{site.theme.path}}/dist/js/lib/flickity.pkgd.min.js"></script>
+	<script type="text/javascript" src="{{site.theme.path}}/dist/js/single-portfolio.js"></script>
+{% endblock %}

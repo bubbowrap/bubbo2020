@@ -14,16 +14,21 @@
 	{% block header %}
 		{% include 'headers/header.twig' %}
 	{% endblock %}
-		<main class="site-main {{ layout_class }}" role="main">
+	<main class="site-main {{ layout_class }}" role="main">
 
-	{% block hero %}
-	    <section class="hero">
-		</section>
-	{% endblock %}
+		{% block hero %}
+			<section class="hero">
+			</section>
+		{% endblock %}
+
+		{% block media %}{% endblock %}
 
 		{% block content %}
 			Sorry, no content
 		{% endblock %}
+
+		{% block page_navigation %}{% endblock %}
+
 	</main>
 
 	{% block footer %}

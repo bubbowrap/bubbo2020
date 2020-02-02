@@ -3,6 +3,10 @@
 @import "partials/all";
 @import "objects/all";
 
+// Library
+@import "lib/flickity";
+
 // Pages
 @import "templates/front-page";
 @import "templates/404";
+@import "templates/single-portfolio";
