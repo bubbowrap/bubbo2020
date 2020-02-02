@@ -7,9 +7,9 @@ new Bubbowrap.com theme for 2020, built with Wordpress/Twig/ACF. Wanted to try o
 
 ### Built with:
 
-- [wordpress](https://wordpress.org/)
-- [npm](https://docs.npmjs.com/cli/install)
-- [twig](https://twig.symfony.com)
+- [Wordpress](https://wordpress.org/)
+- [NPM](https://docs.npmjs.com/cli/install)
+- [Twig](https://twig.symfony.com)
 - [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
 
 
@@ -37,4 +37,4 @@ new Bubbowrap.com theme for 2020, built with Wordpress/Twig/ACF. Wanted to try o
 
  - `gulp minify-js` concat & minify js files
 
- - `gulp build` Runs all of the following commands: *sass, minify-css, minify-js*
+ - `gulp build` Runs: *sass, minify-css, minify-js*
