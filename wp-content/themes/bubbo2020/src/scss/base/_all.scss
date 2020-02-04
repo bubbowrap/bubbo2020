@@ -24,11 +24,11 @@ body {
     font-weight: $font-normal;
     letter-spacing: .025rem;
     height: 100vh;
-
-    @media (max-width: $screen-md) {
-        &.no-scroll {
-            overflow: hidden;
-        }
+}
+.no-scroll {
+@media (max-width: $screen-md) {
+        overflow: hidden;
+        height: 100%;
     }
 }
 

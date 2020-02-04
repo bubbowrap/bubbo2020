@@ -16,19 +16,27 @@ $(document).ready(function() {
 
     'use strict';
 
+    function closeMenu() {
+        $(".hamburger").toggleClass("is-active");
+        $('body').toggleClass("no-scroll");
+        $(".navigation-mobile").toggleClass("is-active");
+        $(".overlay").toggleClass("is-active");
+    }
+
     // changes how jump to works depending if you're on the homepage or not
     if ($("body").hasClass("home")) {
-        $('a[href^="/#"]').click(function(e) {
+        $('a[href^="/#"]').on('touchstart click', function(e) {
         // Prevent the jump and the #hash from appearing on the address bar
+        closeMenu();
         e.preventDefault();
-        $(window).stop(true).scrollTo(this.hash, {duration:700, interrupt:true});
+        $(window).stop(true).scrollTo(this.hash, {duration:700, interrupt:false});
     });
     }
     else {
-        $('a[href^="#"]').click(function(e) {
+        $('a[href^="#"]').on('click', function(e) {
             // Prevent the jump and the #hash from appearing on the address bar
             e.preventDefault();
-            $(window).stop(true).scrollTo(this.hash - 200, {duration:1000, interrupt:true});
+            $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:false});
         });
     }
 
@@ -37,13 +45,11 @@ $(document).ready(function() {
     //------------------------------------------
 
     //toggles active states of overlay/hamburger menu/menu
-    $(".hamburger, .overlay, .navigation-mobile__list-item").click(function(){
-        $(".hamburger").toggleClass("is-active");
-      $('body').toggleClass("no-scroll");
-      $(".navigation-mobile").toggleClass("is-active");
-      $(".overlay").toggleClass("is-active");
+    $(".hamburger, .overlay").on('click', function(e){
+        closeMenu();
+        return false;
     });
-
+    
     //------------------------------------------
     // 	 Sticky Header
     //------------------------------------------

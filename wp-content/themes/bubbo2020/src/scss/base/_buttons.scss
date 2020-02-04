@@ -37,8 +37,6 @@
 .btn--line {
     position: relative;
     padding-right: 2rem;
-    display: inline-flex;
-    align-items: center;
 
     @media(min-width: $screen-md) {
         font-size: 1.5rem;
@@ -51,6 +49,10 @@
         right: 0;
         margin-left: .5rem;
         transition: all .2s ease;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
     }
 
     &:hover {
