@@ -1,5 +1,16 @@
 <?php
 
+//Remove Gutenberg Block Library CSS from loading on the frontend
+function smartwp_remove_wp_block_library_css(){
+	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style( 'wp-block-library-theme' );
+	wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
+	if ( ! is_user_logged_in() ) {
+        wp_dequeue_style( 'dashicons' );
+    }
+   }
+   add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
+
 if ( ! class_exists( 'Timber' ) ) {
 	add_action( 'admin_notices', function() {
 			echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php' ) ) . '</a></p></div>';
