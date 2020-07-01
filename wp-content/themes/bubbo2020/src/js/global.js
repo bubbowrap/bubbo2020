@@ -30,7 +30,7 @@ $(document).ready(function() {
         closeMenu();
         e.preventDefault();
         $(window).stop(true).scrollTo(this.hash, {duration:700, interrupt:false});
-    });
+    }, {passive: true});
     }
     else {
         $('a[href^="#"]').on('click', function(e) {
