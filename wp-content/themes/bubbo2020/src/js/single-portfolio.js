@@ -2,10 +2,9 @@
 // 	 Portfolio Slider (Flickity)
 //------------------------------------------
 
-$('.main-carousel').flickity({
-    // options
+var flkty = new Flickity( '.main-carousel', {
     wrapAround: true,
     imagesLoaded: true,
     contain: true,
     accessibility: true
-  });
+});
